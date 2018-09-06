@@ -7,25 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9904B21CEB204B935EB4D4F2 /* libPods-XR_Douyin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CACB72111ABB9490609A487A /* libPods-XR_Douyin.a */; };
 		CF2517B52141211400BABCF9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517B42141211400BABCF9 /* AppDelegate.m */; };
 		CF2517B82141211400BABCF9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517B72141211400BABCF9 /* ViewController.m */; };
-		CF2517BB2141211400BABCF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2517B92141211400BABCF9 /* Main.storyboard */; };
 		CF2517BD2141211500BABCF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF2517BC2141211500BABCF9 /* Assets.xcassets */; };
 		CF2517C02141211500BABCF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2517BE2141211500BABCF9 /* LaunchScreen.storyboard */; };
 		CF2517C32141211500BABCF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517C22141211500BABCF9 /* main.m */; };
+		CF2517CB214121C200BABCF9 /* XRDChatlistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517CA214121C200BABCF9 /* XRDChatlistVC.m */; };
+		CF2517D1214123BF00BABCF9 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517D0214123BF00BABCF9 /* BaseViewController.m */; };
+		CF2517D52141301000BABCF9 /* NetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517D42141301000BABCF9 /* NetworkHelper.m */; };
+		CF2517D9214136B200BABCF9 /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517D8214136B200BABCF9 /* BaseRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1199FA2C91B8F185F6495F8C /* Pods-XR_Douyin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XR_Douyin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XR_Douyin/Pods-XR_Douyin.debug.xcconfig"; sourceTree = "<group>"; };
+		194E1B417B7CE508518FCB3C /* Pods-XR_Douyin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XR_Douyin.release.xcconfig"; path = "Pods/Target Support Files/Pods-XR_Douyin/Pods-XR_Douyin.release.xcconfig"; sourceTree = "<group>"; };
+		CACB72111ABB9490609A487A /* libPods-XR_Douyin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XR_Douyin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2517B02141211400BABCF9 /* XR_Douyin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XR_Douyin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2517B32141211400BABCF9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CF2517B42141211400BABCF9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CF2517B62141211400BABCF9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CF2517B72141211400BABCF9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CF2517BA2141211400BABCF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF2517BC2141211500BABCF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF2517BF2141211500BABCF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF2517C12141211500BABCF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF2517C22141211500BABCF9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CF2517C9214121C200BABCF9 /* XRDChatlistVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRDChatlistVC.h; sourceTree = "<group>"; };
+		CF2517CA214121C200BABCF9 /* XRDChatlistVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRDChatlistVC.m; sourceTree = "<group>"; };
+		CF2517CD2141235B00BABCF9 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		CF2517CF214123BF00BABCF9 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		CF2517D0214123BF00BABCF9 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		CF2517D32141301000BABCF9 /* NetworkHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkHelper.h; sourceTree = "<group>"; };
+		CF2517D42141301000BABCF9 /* NetworkHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkHelper.m; sourceTree = "<group>"; };
+		CF2517D7214136B200BABCF9 /* BaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseRequest.h; sourceTree = "<group>"; };
+		CF2517D8214136B200BABCF9 /* BaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +48,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9904B21CEB204B935EB4D4F2 /* libPods-XR_Douyin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1255F52DAFA93FFBD9849DC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1199FA2C91B8F185F6495F8C /* Pods-XR_Douyin.debug.xcconfig */,
+				194E1B417B7CE508518FCB3C /* Pods-XR_Douyin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9BA0630F693646F4FED7F5E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CACB72111ABB9490609A487A /* libPods-XR_Douyin.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF2517A72141211400BABCF9 = {
 			isa = PBXGroup;
 			children = (
 				CF2517B22141211400BABCF9 /* XR_Douyin */,
 				CF2517B12141211400BABCF9 /* Products */,
+				1255F52DAFA93FFBD9849DC2 /* Pods */,
+				9BA0630F693646F4FED7F5E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,17 +93,57 @@
 		CF2517B22141211400BABCF9 /* XR_Douyin */ = {
 			isa = PBXGroup;
 			children = (
+				CF2517D221412F9400BABCF9 /* Network */,
+				CF2517CE2141239400BABCF9 /* Controller */,
+				CF2517CC2141233D00BABCF9 /* Utils */,
 				CF2517B32141211400BABCF9 /* AppDelegate.h */,
 				CF2517B42141211400BABCF9 /* AppDelegate.m */,
 				CF2517B62141211400BABCF9 /* ViewController.h */,
 				CF2517B72141211400BABCF9 /* ViewController.m */,
-				CF2517B92141211400BABCF9 /* Main.storyboard */,
 				CF2517BC2141211500BABCF9 /* Assets.xcassets */,
 				CF2517BE2141211500BABCF9 /* LaunchScreen.storyboard */,
 				CF2517C12141211500BABCF9 /* Info.plist */,
 				CF2517C22141211500BABCF9 /* main.m */,
 			);
 			path = XR_Douyin;
+			sourceTree = "<group>";
+		};
+		CF2517CC2141233D00BABCF9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CF2517CD2141235B00BABCF9 /* Constants.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CF2517CE2141239400BABCF9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF2517CF214123BF00BABCF9 /* BaseViewController.h */,
+				CF2517D0214123BF00BABCF9 /* BaseViewController.m */,
+				CF2517C9214121C200BABCF9 /* XRDChatlistVC.h */,
+				CF2517CA214121C200BABCF9 /* XRDChatlistVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CF2517D221412F9400BABCF9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CF2517D62141369100BABCF9 /* HttpRequest */,
+				CF2517D32141301000BABCF9 /* NetworkHelper.h */,
+				CF2517D42141301000BABCF9 /* NetworkHelper.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CF2517D62141369100BABCF9 /* HttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+				CF2517D7214136B200BABCF9 /* BaseRequest.h */,
+				CF2517D8214136B200BABCF9 /* BaseRequest.m */,
+			);
+			path = HttpRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +153,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF2517C62141211500BABCF9 /* Build configuration list for PBXNativeTarget "XR_Douyin" */;
 			buildPhases = (
+				DCDDF0AA346393CB08008034 /* [CP] Check Pods Manifest.lock */,
 				CF2517AC2141211400BABCF9 /* Sources */,
 				CF2517AD2141211400BABCF9 /* Frameworks */,
 				CF2517AE2141211400BABCF9 /* Resources */,
@@ -130,11 +206,31 @@
 			files = (
 				CF2517C02141211500BABCF9 /* LaunchScreen.storyboard in Resources */,
 				CF2517BD2141211500BABCF9 /* Assets.xcassets in Resources */,
-				CF2517BB2141211400BABCF9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DCDDF0AA346393CB08008034 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XR_Douyin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CF2517AC2141211400BABCF9 /* Sources */ = {
@@ -142,6 +238,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF2517B82141211400BABCF9 /* ViewController.m in Sources */,
+				CF2517D1214123BF00BABCF9 /* BaseViewController.m in Sources */,
+				CF2517D52141301000BABCF9 /* NetworkHelper.m in Sources */,
+				CF2517CB214121C200BABCF9 /* XRDChatlistVC.m in Sources */,
+				CF2517D9214136B200BABCF9 /* BaseRequest.m in Sources */,
 				CF2517C32141211500BABCF9 /* main.m in Sources */,
 				CF2517B52141211400BABCF9 /* AppDelegate.m in Sources */,
 			);
@@ -150,14 +250,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CF2517B92141211400BABCF9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CF2517BA2141211400BABCF9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CF2517BE2141211500BABCF9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -281,11 +373,13 @@
 		};
 		CF2517C72141211500BABCF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1199FA2C91B8F185F6495F8C /* Pods-XR_Douyin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WVSA339HRN;
 				INFOPLIST_FILE = XR_Douyin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +392,13 @@
 		};
 		CF2517C82141211500BABCF9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 194E1B417B7CE508518FCB3C /* Pods-XR_Douyin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WVSA339HRN;
 				INFOPLIST_FILE = XR_Douyin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
