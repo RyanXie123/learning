@@ -17,6 +17,14 @@
 		CF2517D1214123BF00BABCF9 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517D0214123BF00BABCF9 /* BaseViewController.m */; };
 		CF2517D52141301000BABCF9 /* NetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517D42141301000BABCF9 /* NetworkHelper.m */; };
 		CF2517D9214136B200BABCF9 /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517D8214136B200BABCF9 /* BaseRequest.m */; };
+		CF2517DD21414D3200BABCF9 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517DC21414D3200BABCF9 /* BaseModel.m */; };
+		CF2517E021414D6D00BABCF9 /* GroupChat.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517DF21414D6D00BABCF9 /* GroupChat.m */; };
+		CF2517E321414EC500BABCF9 /* XRDGroupChatListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517E221414EC500BABCF9 /* XRDGroupChatListRequest.m */; };
+		CF2517E72141540700BABCF9 /* BaseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517E62141540700BABCF9 /* BaseResponse.m */; };
+		CF2517EA2141552700BABCF9 /* PictureInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517E92141552700BABCF9 /* PictureInfo.m */; };
+		CF2517ED2141555F00BABCF9 /* Visitor.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517EC2141555F00BABCF9 /* Visitor.m */; };
+		CF2517F0214156F300BABCF9 /* ChatListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517EF214156F300BABCF9 /* ChatListResponse.m */; };
+		CF2517F421415A7E00BABCF9 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517F321415A7E00BABCF9 /* NSDate+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +49,22 @@
 		CF2517D42141301000BABCF9 /* NetworkHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkHelper.m; sourceTree = "<group>"; };
 		CF2517D7214136B200BABCF9 /* BaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseRequest.h; sourceTree = "<group>"; };
 		CF2517D8214136B200BABCF9 /* BaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseRequest.m; sourceTree = "<group>"; };
+		CF2517DB21414D3200BABCF9 /* BaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		CF2517DC21414D3200BABCF9 /* BaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		CF2517DE21414D6D00BABCF9 /* GroupChat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupChat.h; sourceTree = "<group>"; };
+		CF2517DF21414D6D00BABCF9 /* GroupChat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupChat.m; sourceTree = "<group>"; };
+		CF2517E121414EC500BABCF9 /* XRDGroupChatListRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRDGroupChatListRequest.h; sourceTree = "<group>"; };
+		CF2517E221414EC500BABCF9 /* XRDGroupChatListRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRDGroupChatListRequest.m; sourceTree = "<group>"; };
+		CF2517E52141540700BABCF9 /* BaseResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseResponse.h; sourceTree = "<group>"; };
+		CF2517E62141540700BABCF9 /* BaseResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseResponse.m; sourceTree = "<group>"; };
+		CF2517E82141552700BABCF9 /* PictureInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureInfo.h; sourceTree = "<group>"; };
+		CF2517E92141552700BABCF9 /* PictureInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureInfo.m; sourceTree = "<group>"; };
+		CF2517EB2141555F00BABCF9 /* Visitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Visitor.h; sourceTree = "<group>"; };
+		CF2517EC2141555F00BABCF9 /* Visitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Visitor.m; sourceTree = "<group>"; };
+		CF2517EE214156F300BABCF9 /* ChatListResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatListResponse.h; sourceTree = "<group>"; };
+		CF2517EF214156F300BABCF9 /* ChatListResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatListResponse.m; sourceTree = "<group>"; };
+		CF2517F221415A7E00BABCF9 /* NSDate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		CF2517F321415A7E00BABCF9 /* NSDate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +117,8 @@
 		CF2517B22141211400BABCF9 /* XR_Douyin */ = {
 			isa = PBXGroup;
 			children = (
+				CF2517F121415A5600BABCF9 /* Category */,
+				CF2517DA21414D1B00BABCF9 /* Entity */,
 				CF2517D221412F9400BABCF9 /* Network */,
 				CF2517CE2141239400BABCF9 /* Controller */,
 				CF2517CC2141233D00BABCF9 /* Utils */,
@@ -130,6 +156,7 @@
 		CF2517D221412F9400BABCF9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				CF2517E4214153E100BABCF9 /* HttpResponse */,
 				CF2517D62141369100BABCF9 /* HttpRequest */,
 				CF2517D32141301000BABCF9 /* NetworkHelper.h */,
 				CF2517D42141301000BABCF9 /* NetworkHelper.m */,
@@ -142,8 +169,45 @@
 			children = (
 				CF2517D7214136B200BABCF9 /* BaseRequest.h */,
 				CF2517D8214136B200BABCF9 /* BaseRequest.m */,
+				CF2517E121414EC500BABCF9 /* XRDGroupChatListRequest.h */,
+				CF2517E221414EC500BABCF9 /* XRDGroupChatListRequest.m */,
 			);
 			path = HttpRequest;
+			sourceTree = "<group>";
+		};
+		CF2517DA21414D1B00BABCF9 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CF2517DB21414D3200BABCF9 /* BaseModel.h */,
+				CF2517DC21414D3200BABCF9 /* BaseModel.m */,
+				CF2517DE21414D6D00BABCF9 /* GroupChat.h */,
+				CF2517DF21414D6D00BABCF9 /* GroupChat.m */,
+				CF2517E82141552700BABCF9 /* PictureInfo.h */,
+				CF2517E92141552700BABCF9 /* PictureInfo.m */,
+				CF2517EB2141555F00BABCF9 /* Visitor.h */,
+				CF2517EC2141555F00BABCF9 /* Visitor.m */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		CF2517E4214153E100BABCF9 /* HttpResponse */ = {
+			isa = PBXGroup;
+			children = (
+				CF2517E52141540700BABCF9 /* BaseResponse.h */,
+				CF2517E62141540700BABCF9 /* BaseResponse.m */,
+				CF2517EE214156F300BABCF9 /* ChatListResponse.h */,
+				CF2517EF214156F300BABCF9 /* ChatListResponse.m */,
+			);
+			path = HttpResponse;
+			sourceTree = "<group>";
+		};
+		CF2517F121415A5600BABCF9 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				CF2517F221415A7E00BABCF9 /* NSDate+Extension.h */,
+				CF2517F321415A7E00BABCF9 /* NSDate+Extension.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,13 +301,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF2517EA2141552700BABCF9 /* PictureInfo.m in Sources */,
 				CF2517B82141211400BABCF9 /* ViewController.m in Sources */,
 				CF2517D1214123BF00BABCF9 /* BaseViewController.m in Sources */,
+				CF2517E321414EC500BABCF9 /* XRDGroupChatListRequest.m in Sources */,
+				CF2517DD21414D3200BABCF9 /* BaseModel.m in Sources */,
+				CF2517E021414D6D00BABCF9 /* GroupChat.m in Sources */,
+				CF2517F0214156F300BABCF9 /* ChatListResponse.m in Sources */,
 				CF2517D52141301000BABCF9 /* NetworkHelper.m in Sources */,
 				CF2517CB214121C200BABCF9 /* XRDChatlistVC.m in Sources */,
+				CF2517ED2141555F00BABCF9 /* Visitor.m in Sources */,
 				CF2517D9214136B200BABCF9 /* BaseRequest.m in Sources */,
+				CF2517F421415A7E00BABCF9 /* NSDate+Extension.m in Sources */,
 				CF2517C32141211500BABCF9 /* main.m in Sources */,
 				CF2517B52141211400BABCF9 /* AppDelegate.m in Sources */,
+				CF2517E72141540700BABCF9 /* BaseResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

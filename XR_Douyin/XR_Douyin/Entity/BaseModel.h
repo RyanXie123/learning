@@ -1,5 +1,5 @@
 //
-//  BaseRequest.h
+//  BaseModel.h
 //  XR_Douyin
 //
 //  Created by 谢汝 on 2018/9/6.
@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <JSONModel/JSONModel.h>
-@interface BaseRequest : JSONModel
+#import "JSONModel.h"
+@interface BaseModel : JSONModel
 
 @end

@@ -6,8 +6,13 @@
 //  Copyright © 2018年 谢汝. All rights reserved.
 //
 
+
 #ifndef Constants_h
 #define Constants_h
+
+
+
+#define BaseUrl @"http://116.62.9.17:8080/douyin/"
 #define RGBA(R, G, B, A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
 #define ColorThemeGrayDark RGBA(20.0, 21.0, 30.0, 1.0)
 #define ColorWhite [UIColor whiteColor]
@@ -36,6 +41,10 @@
 
 #define UIViewMidX(view) CGRectGetMidX(view.frame)
 #define UIViewMidY(view) CGRectGetMidY(view.frame)
+
+
+//获取群聊列表数据
+#define FIND_GROUP_CHAT_BY_PAGE_URL            @"groupchat/list"
 
 
 #endif /* Constants_h */
