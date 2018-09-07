@@ -4,4 +4,5 @@ target 'XR_Douyin' do
     pod 'Masonry'
     pod 'SocketRocket'
     pod 'libwebp'
+    pod 'SDWebImage'
 end

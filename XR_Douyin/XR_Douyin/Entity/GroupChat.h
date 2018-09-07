@@ -9,8 +9,8 @@
 #import "BaseModel.h"
 #import "Visitor.h"
 #import "PictureInfo.h"
-
-
+#import <UIKit/UIKit.h>
+@protocol GroupChat;
 @interface GroupChat : BaseModel
 
 
@@ -24,6 +24,6 @@
 @property (nonatomic , strong) PictureInfo         *pic_thumbnail;
 @property (nonatomic , assign) NSInteger           create_time;
 
-
+@property (nonatomic, assign) CGFloat cellHeight;
 
 @end

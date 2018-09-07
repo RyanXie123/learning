@@ -12,5 +12,5 @@
 
 
 @interface ChatListResponse : BaseResponse
-@property (nonatomic, copy) NSArray<GroupChat *>  *data;
+@property (nonatomic, copy) NSArray<GroupChat>  *data;
 @end

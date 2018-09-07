@@ -25,6 +25,11 @@
 		CF2517ED2141555F00BABCF9 /* Visitor.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517EC2141555F00BABCF9 /* Visitor.m */; };
 		CF2517F0214156F300BABCF9 /* ChatListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517EF214156F300BABCF9 /* ChatListResponse.m */; };
 		CF2517F421415A7E00BABCF9 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517F321415A7E00BABCF9 /* NSDate+Extension.m */; };
+		CF93120721421E1C00865EBC /* TextMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF93120621421E1C00865EBC /* TextMessageCell.m */; };
+		CF93120A214226A600865EBC /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF931209214226A600865EBC /* UIImage+Extension.m */; };
+		CF93120D2142492800865EBC /* NSAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF93120C2142492800865EBC /* NSAttributedString+Extension.m */; };
+		CF93121021427B4200865EBC /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF93120F21427B4200865EBC /* NSString+Extension.m */; };
+		CF9312132142848000865EBC /* RefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9312122142848000865EBC /* RefreshControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +70,16 @@
 		CF2517EF214156F300BABCF9 /* ChatListResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatListResponse.m; sourceTree = "<group>"; };
 		CF2517F221415A7E00BABCF9 /* NSDate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		CF2517F321415A7E00BABCF9 /* NSDate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		CF93120521421E1C00865EBC /* TextMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextMessageCell.h; sourceTree = "<group>"; };
+		CF93120621421E1C00865EBC /* TextMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextMessageCell.m; sourceTree = "<group>"; };
+		CF931208214226A600865EBC /* UIImage+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		CF931209214226A600865EBC /* UIImage+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		CF93120B2142492800865EBC /* NSAttributedString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Extension.h"; sourceTree = "<group>"; };
+		CF93120C2142492800865EBC /* NSAttributedString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Extension.m"; sourceTree = "<group>"; };
+		CF93120E21427B4200865EBC /* NSString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		CF93120F21427B4200865EBC /* NSString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		CF9312112142848000865EBC /* RefreshControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefreshControl.h; sourceTree = "<group>"; };
+		CF9312122142848000865EBC /* RefreshControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefreshControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +160,7 @@
 		CF2517CE2141239400BABCF9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CF9312042142152000865EBC /* Chat */,
 				CF2517CF214123BF00BABCF9 /* BaseViewController.h */,
 				CF2517D0214123BF00BABCF9 /* BaseViewController.m */,
 				CF2517C9214121C200BABCF9 /* XRDChatlistVC.h */,
@@ -206,8 +222,25 @@
 			children = (
 				CF2517F221415A7E00BABCF9 /* NSDate+Extension.h */,
 				CF2517F321415A7E00BABCF9 /* NSDate+Extension.m */,
+				CF931208214226A600865EBC /* UIImage+Extension.h */,
+				CF931209214226A600865EBC /* UIImage+Extension.m */,
+				CF93120B2142492800865EBC /* NSAttributedString+Extension.h */,
+				CF93120C2142492800865EBC /* NSAttributedString+Extension.m */,
+				CF93120E21427B4200865EBC /* NSString+Extension.h */,
+				CF93120F21427B4200865EBC /* NSString+Extension.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		CF9312042142152000865EBC /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				CF93120521421E1C00865EBC /* TextMessageCell.h */,
+				CF93120621421E1C00865EBC /* TextMessageCell.m */,
+				CF9312112142848000865EBC /* RefreshControl.h */,
+				CF9312122142848000865EBC /* RefreshControl.m */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,19 +336,24 @@
 			files = (
 				CF2517EA2141552700BABCF9 /* PictureInfo.m in Sources */,
 				CF2517B82141211400BABCF9 /* ViewController.m in Sources */,
+				CF93120A214226A600865EBC /* UIImage+Extension.m in Sources */,
 				CF2517D1214123BF00BABCF9 /* BaseViewController.m in Sources */,
 				CF2517E321414EC500BABCF9 /* XRDGroupChatListRequest.m in Sources */,
 				CF2517DD21414D3200BABCF9 /* BaseModel.m in Sources */,
+				CF93121021427B4200865EBC /* NSString+Extension.m in Sources */,
 				CF2517E021414D6D00BABCF9 /* GroupChat.m in Sources */,
+				CF93120721421E1C00865EBC /* TextMessageCell.m in Sources */,
 				CF2517F0214156F300BABCF9 /* ChatListResponse.m in Sources */,
 				CF2517D52141301000BABCF9 /* NetworkHelper.m in Sources */,
 				CF2517CB214121C200BABCF9 /* XRDChatlistVC.m in Sources */,
+				CF93120D2142492800865EBC /* NSAttributedString+Extension.m in Sources */,
 				CF2517ED2141555F00BABCF9 /* Visitor.m in Sources */,
 				CF2517D9214136B200BABCF9 /* BaseRequest.m in Sources */,
 				CF2517F421415A7E00BABCF9 /* NSDate+Extension.m in Sources */,
 				CF2517C32141211500BABCF9 /* main.m in Sources */,
 				CF2517B52141211400BABCF9 /* AppDelegate.m in Sources */,
 				CF2517E72141540700BABCF9 /* BaseResponse.m in Sources */,
+				CF9312132142848000865EBC /* RefreshControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,7 +494,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ryan.XR-Douyin";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xieru.douyin.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -475,7 +513,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ryan.XR-Douyin";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xieru.douyin.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
