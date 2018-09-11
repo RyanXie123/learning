@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "XRDChatlistVC.h"
+#import "UserHomePageController.h"
+#import "NetworkHelper.h"
 
 
 @interface AppDelegate ()
@@ -19,11 +21,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
-    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[XRDChatlistVC alloc]init]];
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[UserHomePageController alloc]init]];
 
     [self.window makeKeyAndVisible];
+    [NetworkHelper startListening];
     return YES;
 }
 

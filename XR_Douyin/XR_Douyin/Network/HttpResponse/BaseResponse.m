@@ -9,5 +9,7 @@
 #import "BaseResponse.h"
 
 @implementation BaseResponse
-
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    return YES;
+}
 @end

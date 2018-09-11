@@ -11,13 +11,22 @@
 #import "NetworkHelper.h"
 #import "ChatListResponse.h"
 #import "TextMessageCell.h"
+#import "RefreshControl.h"
+#import "ChatTextView.h"
+
 
 @interface XRDChatlistVC ()<UITableViewDataSource,UITableViewDelegate>
+
+
+
 @property (nonatomic, assign) NSInteger pageIndex;
 @property (nonatomic, assign) NSInteger pageSize;
-
-@property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray<GroupChat *> *data;
+@property (nonatomic, strong) ChatTextView *textView;
+
+@property (nonatomic, strong) RefreshControl *refreshControl;
+@property (nonatomic, strong) UITableView *tableView;
+
 @end
 
 @implementation XRDChatlistVC
@@ -39,16 +48,27 @@
     _tableView.dataSource = self;
     _tableView.alwaysBounceVertical = YES;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
     [_tableView registerClass:[TextMessageCell class] forCellReuseIdentifier:NSStringFromClass(TextMessageCell.class)];
     
     if (@available(iOS 11.0,*)) {
-        _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
+        _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }else {
-        self.automaticallyAdjustsScrollViewInsets = YES;
+        self.automaticallyAdjustsScrollViewInsets = NO;
     }
     
     [self.view addSubview:_tableView];
+    
+    _refreshControl = [RefreshControl new];
+    __weak typeof(self) weakSelf =self;
+    [_refreshControl setOnRefreshBlock:^{
+        [weakSelf loadData:weakSelf.pageIndex pageSize:weakSelf.pageSize];
+    }];
+    [_tableView addSubview:_refreshControl];
+    
+    _textView = [ChatTextView new];
+    
+    
+    
     
     [self loadData:_pageIndex pageSize:_pageSize];
 }
@@ -63,7 +83,7 @@
     [self setStatusBarBackgroundColor:ColorThemeGrayDark];
     
     
-    
+    [_textView show];
 }
 
 
@@ -100,14 +120,28 @@
         
         NSArray<GroupChat *> *array = response.data;
         
-        [weakSelf processData:array];
+        NSInteger preCount = weakSelf.data.count;
         
-        if (weakSelf.pageIndex++ == 0) {
+        [UIView setAnimationsEnabled:NO];
+        [weakSelf processData:array];
+    
+        NSInteger curCount = weakSelf.data.count;
+        
+
+        if (weakSelf.pageIndex++ == 0 || preCount == 0) {
             [weakSelf scrollToBottom];
+        }else {
+            [weakSelf.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:curCount - preCount inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
         }
         
-    } failure:^(NSError *error) {
+        [weakSelf.refreshControl endRefresh];
+        if (!response.has_more) {
+            [weakSelf.refreshControl loadAll];
+        }
+        [UIView setAnimationsEnabled:YES];
         
+    } failure:^(NSError *error) {
+        [weakSelf.refreshControl endRefresh];
     }];
     
 }
@@ -117,16 +151,16 @@
         return;
     }
     //test 先显示文字信息
-    
+    NSMutableArray *tempArray = [NSMutableArray array];
     for (GroupChat *chat in data) {
         if ([chat.msg_type isEqualToString:@"text"]) {
             chat.cellHeight = [TextMessageCell cellHeight:chat];
-            [_data addObject:chat];
+            [tempArray addObject:chat];
             
         }
     }
-    
-    
+    NSIndexSet *indexes = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [tempArray count])];
+    [self.data insertObjects:tempArray atIndexes:indexes];
     [self.tableView reloadData];
 }
 
@@ -137,6 +171,9 @@
         [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.data.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
     }
 }
+
+
+
 
 
 

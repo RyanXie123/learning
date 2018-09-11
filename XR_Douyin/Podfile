@@ -3,6 +3,7 @@ target 'XR_Douyin' do
     pod 'JSONModel'
     pod 'Masonry'
     pod 'SocketRocket'
-    pod 'libwebp'
+    pod 'libwebp','~> 0.5'
     pod 'SDWebImage'
+    pod 'SDWebImage/WebP'
 end

@@ -13,13 +13,20 @@
 #import "UIImage+Extension.h"
 #import "NSAttributedString+Extension.h"
 #import "NSString+Extension.h"
-
+#import "NSNotification+Extension.h"
+#import "UIWindow+Extension.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 //UDID MD5_UDID
 #define UDID [[[UIDevice currentDevice] identifierForVendor] UUIDString]
 #define MD5_UDID [UDID md5]
 
 #define BaseUrl @"http://116.62.9.17:8080/douyin/"
+//根据用户id获取用户信息
+#define FIND_USER_BY_UID_URL    @"user"
+//获取用户发布的短视频列表数据
+#define FIND_AWEME_POST_BY_PAGE_URL            @"aweme/post"
+
 
 
 //color
@@ -111,5 +118,12 @@ alpha:1.0]
 //获取群聊列表数据
 #define FIND_GROUP_CHAT_BY_PAGE_URL            @"groupchat/list"
 
+
+#define dispatch_main_sync_safe(block)\
+if ([NSThread isMainThread]) {\
+block();\
+} else {\
+dispatch_sync(dispatch_get_main_queue(), block);\
+}
 
 #endif /* Constants_h */

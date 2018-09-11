@@ -8,6 +8,9 @@
 
 #import "NetworkHelper.h"
 
+NSString *const NetworkStatusChangeNotification= @"NetworkStatusChangeNotification";
+
+
 @implementation NetworkHelper
 
 
@@ -28,14 +31,30 @@
     return [[NetworkHelper sharedManager]GET:[BaseUrl stringByAppendingString:urlPath] parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [NetworkHelper processResponseData:responseObject succes:success failure:failure];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        failure(error);
+    }];
+}
+
+
++(NSURLSessionDataTask *)uploadWithUrlPath:(NSString *)urlPath data:(NSData *)data request:(BaseRequest *)request progress:(UploadProgress)progress  success:(HttpSuccess)success failure:(HttpFailure)failure {
+    NSDictionary *parameters = [request toDictionary];
+    return [[NetworkHelper sharedManager]POST:[BaseUrl stringByAppendingString:urlPath] parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        [formData appendPartWithFileData:data name:@"file" fileName:@"file" mimeType:@"multipart/form-data"];
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        dispatch_main_sync_safe(^{
+            progress(uploadProgress.fractionCompleted);
+        });
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [NetworkHelper processResponseData:responseObject succes:success failure:failure];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(error);
     }];
 }
 
 
 +(void)processResponseData:(id)responseObject succes:(HttpSuccess)success failure:(HttpFailure)failure {
     NSInteger code = -1;
-    NSString *message = @"";
+    NSString *message = @"response data error";
     if ([responseObject isKindOfClass:[NSDictionary class]]) {
         NSDictionary *dic = (NSDictionary *)responseObject;
         code = [(NSNumber *)[dic objectForKey:@"code"] integerValue];
@@ -51,6 +70,28 @@
     }
     
 }
+
++ (AFNetworkReachabilityManager *)sharedReachabilityManager {
+    static dispatch_once_t onceToken;
+    static AFNetworkReachabilityManager *manager;
+    dispatch_once(&onceToken, ^{
+        manager = [AFNetworkReachabilityManager sharedManager];
+    });
+    return manager;
+}
+
++ (void)startListening {
+    [[NetworkHelper sharedReachabilityManager]startMonitoring];
+    [[NetworkHelper sharedReachabilityManager]setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        [[NSNotificationCenter defaultCenter]postNotificationName:NetworkStatusChangeNotification object:nil];
+    }];
+ 
+}
+
++ (AFNetworkReachabilityStatus)networkStatus {
+    return [self sharedReachabilityManager].networkReachabilityStatus;
+}
+
 
 
 

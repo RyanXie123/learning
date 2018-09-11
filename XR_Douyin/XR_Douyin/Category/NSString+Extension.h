@@ -13,4 +13,7 @@
 
 - (NSString *) md5;
 
+
++ (NSDictionary *)readJson2DicWithFileName:(NSString *)fileName;
+
 @end
