@@ -32,6 +32,7 @@
 		CF2517ED2141555F00BABCF9 /* Visitor.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517EC2141555F00BABCF9 /* Visitor.m */; };
 		CF2517F0214156F300BABCF9 /* ChatListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517EF214156F300BABCF9 /* ChatListResponse.m */; };
 		CF2517F421415A7E00BABCF9 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517F321415A7E00BABCF9 /* NSDate+Extension.m */; };
+		CF2B8E532150AE72007AE6E6 /* AwemeListController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2B8E522150AE72007AE6E6 /* AwemeListController.m */; };
 		CF3709FC214374B3009DEC79 /* ChatTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3709FB214374B3009DEC79 /* ChatTextView.m */; };
 		CF3709FF2143A09D009DEC79 /* NSNotification+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3709FE2143A09D009DEC79 /* NSNotification+Extension.m */; };
 		CF370A022143AFE6009DEC79 /* EmotionSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = CF370A012143AFE6009DEC79 /* EmotionSelector.m */; };
@@ -104,6 +105,8 @@
 		CF2517EF214156F300BABCF9 /* ChatListResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatListResponse.m; sourceTree = "<group>"; };
 		CF2517F221415A7E00BABCF9 /* NSDate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		CF2517F321415A7E00BABCF9 /* NSDate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		CF2B8E512150AE72007AE6E6 /* AwemeListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwemeListController.h; sourceTree = "<group>"; };
+		CF2B8E522150AE72007AE6E6 /* AwemeListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwemeListController.m; sourceTree = "<group>"; };
 		CF3709FA214374B3009DEC79 /* ChatTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatTextView.h; sourceTree = "<group>"; };
 		CF3709FB214374B3009DEC79 /* ChatTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatTextView.m; sourceTree = "<group>"; };
 		CF3709FD2143A09D009DEC79 /* NSNotification+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNotification+Extension.h"; sourceTree = "<group>"; };
@@ -190,6 +193,7 @@
 		CF2517B22141211400BABCF9 /* XR_Douyin */ = {
 			isa = PBXGroup;
 			children = (
+				CF2B8E502150AE3B007AE6E6 /* AwemeList */,
 				CF370A032143C321009DEC79 /* Resource */,
 				CF2517F121415A5600BABCF9 /* Category */,
 				CF2517DA21414D1B00BABCF9 /* Entity */,
@@ -312,6 +316,15 @@
 				CFB2CF64214652B900524E4B /* UIWindow+Extension.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		CF2B8E502150AE3B007AE6E6 /* AwemeList */ = {
+			isa = PBXGroup;
+			children = (
+				CF2B8E512150AE72007AE6E6 /* AwemeListController.h */,
+				CF2B8E522150AE72007AE6E6 /* AwemeListController.m */,
+			);
+			path = AwemeList;
 			sourceTree = "<group>";
 		};
 		CF370A032143C321009DEC79 /* Resource */ = {
@@ -490,6 +503,7 @@
 				CFB2CF692146661400524E4B /* UserHomePageController.m in Sources */,
 				CF2517D9214136B200BABCF9 /* BaseRequest.m in Sources */,
 				CF2517F421415A7E00BABCF9 /* NSDate+Extension.m in Sources */,
+				CF2B8E532150AE72007AE6E6 /* AwemeListController.m in Sources */,
 				CF2517C32141211500BABCF9 /* main.m in Sources */,
 				CF2517B52141211400BABCF9 /* AppDelegate.m in Sources */,
 				CF2517E72141540700BABCF9 /* BaseResponse.m in Sources */,

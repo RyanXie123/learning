@@ -15,6 +15,7 @@
 #import "AwemeListRequest.h"
 #import "AwemeListResponse.h"
 #import "AwemeCollectoinCell.h"
+#import "LoadMoreControl.h"
 #define USER_INFO_HEADER_HEIGHT 340 + STATUS_BAR_HEIGHT
 
 
@@ -31,6 +32,8 @@
 
 @property (nonatomic, assign) CGFloat itemWidth;
 @property (nonatomic, assign) CGFloat itemHeight;
+
+@property (nonatomic, strong) LoadMoreControl *loadMore;
 @end
 
 @implementation UserHomePageController
@@ -79,6 +82,14 @@
     [_collectionView registerClass:AwemeCollectoinCell.class forCellWithReuseIdentifier:NSStringFromClass(AwemeCollectoinCell.class)];
     
     [self.view addSubview:_collectionView];
+    
+    _loadMore = [[LoadMoreControl alloc]initWithFrame:CGRectMake(0, USER_INFO_HEADER_HEIGHT, SCREEN_WIDTH, 50) surplusCount:15];
+    [_loadMore startLoading];
+    __weak __typeof(self) wself = self;
+    [_loadMore setOnLoad:^{
+        [wself loadData:wself.pageIndex pageSize:wself.pageSize];
+    }];
+    [_collectionView addSubview:_loadMore];
     
 }
 
@@ -188,6 +199,7 @@
         AwemeListResponse *response = [[AwemeListResponse alloc] initWithDictionary:data error:nil];
     
         NSArray<Aweme *> *array = response.data;
+        wSelf.pageIndex++;
         
         [UIView setAnimationsEnabled:NO];
         [wSelf.collectionView performBatchUpdates:^{
@@ -201,12 +213,14 @@
         } completion:^(BOOL finished) {
             [UIView setAnimationsEnabled:YES];
         }];
-        
-        
+        [wSelf.loadMore endLoading];
+        if (!response.has_more) {
+            [wSelf.loadMore loadingAll];
+        }
         
         
     } failure:^(NSError *error) {
-        
+        [wSelf.loadMore loadingFailed];
     }];
 }
 
