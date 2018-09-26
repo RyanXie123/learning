@@ -102,6 +102,34 @@
             
         }
         
+        if ([wself.superView isKindOfClass:[UITableView class]]) {
+            UITableView *tableView = (UITableView *)self.superView;
+            NSInteger lastSection = tableView.numberOfSections - 1;
+            if (lastSection >= 0) {
+                NSInteger lastRow = [tableView numberOfRowsInSection:lastSection] - 1;
+                if (lastRow >= 0) {
+                    NSIndexPath *visibleLastCellIndex = [tableView indexPathForCell:tableView.visibleCells.lastObject];
+                    if (visibleLastCellIndex.section == lastSection && visibleLastCellIndex.row >= (lastRow - _surplusCount)) {
+                        if (wself.loadingType == LoadStateFailed || wself.loadingType == LoadStateIdle) {
+                            if (wself.onLoad) {
+                                wself.onLoad();
+                                [wself startLoading];
+                            }
+                        }
+                        if (visibleLastCellIndex.section == lastSection || visibleLastCellIndex.row == lastRow) {
+                            wself.frame = CGRectMake(0, CGRectGetMaxY(tableView.visibleCells.lastObject.frame), SCREEN_WIDTH, 50);
+                            
+                        }
+                    }
+                    
+//                    NSIndexPath visibleLastCellIndex =
+                }
+            }
+        }
+        
+        
+        
+        
     }else {
         return [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
@@ -159,9 +187,6 @@
 
 - (void)setLoadingType:(LoadingType)loadingType {
     _loadingType = loadingType;
-    
-    
-
     
     switch (loadingType) {
         case LoadStateIdle: {

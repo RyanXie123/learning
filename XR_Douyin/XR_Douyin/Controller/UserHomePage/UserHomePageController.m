@@ -16,6 +16,7 @@
 #import "AwemeListResponse.h"
 #import "AwemeCollectoinCell.h"
 #import "LoadMoreControl.h"
+#import "AwemeListController.h"
 #define USER_INFO_HEADER_HEIGHT 340 + STATUS_BAR_HEIGHT
 
 
@@ -153,6 +154,14 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return  CGSizeMake(_itemWidth, _itemHeight);
 }
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    AwemeListController *controller;
+    controller = [[AwemeListController alloc] initWithVideoData:_workAwemes currentIndex:indexPath.row pageIndex:_pageIndex pageSize:_pageSize awemeType:AwemeWork uid:_uid];
+    
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

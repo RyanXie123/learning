@@ -16,7 +16,7 @@
 #import "NSNotification+Extension.h"
 #import "UIWindow+Extension.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-
+#import "WebCacheHelpler.h"
 //UDID MD5_UDID
 #define UDID [[[UIDevice currentDevice] identifierForVendor] UUIDString]
 #define MD5_UDID [UDID md5]
@@ -27,7 +27,7 @@
 //获取用户发布的短视频列表数据
 #define FIND_AWEME_POST_BY_PAGE_URL            @"aweme/post"
 
-
+#define FIND_COMMENT_BY_PAGE_URL               @"comment/list"
 
 //color
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.0 \

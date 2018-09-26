@@ -13,7 +13,7 @@
 
 - (NSString *) md5;
 
-
+- (NSURL *)urlScheme:(NSString *)scheme;
 + (NSDictionary *)readJson2DicWithFileName:(NSString *)fileName;
-
++ (NSString *)formatCount:(NSInteger)count;
 @end

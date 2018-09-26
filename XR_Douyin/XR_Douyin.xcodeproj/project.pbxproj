@@ -32,17 +32,28 @@
 		CF2517ED2141555F00BABCF9 /* Visitor.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517EC2141555F00BABCF9 /* Visitor.m */; };
 		CF2517F0214156F300BABCF9 /* ChatListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517EF214156F300BABCF9 /* ChatListResponse.m */; };
 		CF2517F421415A7E00BABCF9 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2517F321415A7E00BABCF9 /* NSDate+Extension.m */; };
-		CF2B8E532150AE72007AE6E6 /* AwemeListController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2B8E522150AE72007AE6E6 /* AwemeListController.m */; };
+		CF2B8E5A21510B72007AE6E6 /* AVPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2B8E5621510B71007AE6E6 /* AVPlayerManager.m */; };
+		CF2B8E5B21510B72007AE6E6 /* AVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2B8E5821510B71007AE6E6 /* AVPlayerView.m */; };
+		CF2B8E5E21510BB9007AE6E6 /* AwemeListController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2B8E5D21510BB9007AE6E6 /* AwemeListController.m */; };
+		CF2B8E6F21510DF3007AE6E6 /* WebPImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2B8E6C21510DF3007AE6E6 /* WebPImage.m */; };
+		CF2B8E7021510DF3007AE6E6 /* WebPImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2B8E6D21510DF3007AE6E6 /* WebPImageView.m */; };
+		CF2B8E7121510DF3007AE6E6 /* WebPQueueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2B8E6E21510DF3007AE6E6 /* WebPQueueManager.m */; };
+		CF2B8E99215114A4007AE6E6 /* AwemeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2B8E98215114A4007AE6E6 /* AwemeListCell.m */; };
 		CF3709FC214374B3009DEC79 /* ChatTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3709FB214374B3009DEC79 /* ChatTextView.m */; };
 		CF3709FF2143A09D009DEC79 /* NSNotification+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3709FE2143A09D009DEC79 /* NSNotification+Extension.m */; };
 		CF370A022143AFE6009DEC79 /* EmotionSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = CF370A012143AFE6009DEC79 /* EmotionSelector.m */; };
 		CF370A052143C32D009DEC79 /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CF370A042143C32D009DEC79 /* Emoticons.bundle */; };
 		CF370A072143C342009DEC79 /* emotion.json in Resources */ = {isa = PBXBuildFile; fileRef = CF370A062143C342009DEC79 /* emotion.json */; };
+		CF53ED902154D44700C34CBF /* UIImageView+XR_WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CF53ED8F2154D44700C34CBF /* UIImageView+XR_WebCache.m */; };
 		CF93120721421E1C00865EBC /* TextMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF93120621421E1C00865EBC /* TextMessageCell.m */; };
 		CF93120A214226A600865EBC /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF931209214226A600865EBC /* UIImage+Extension.m */; };
 		CF93120D2142492800865EBC /* NSAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF93120C2142492800865EBC /* NSAttributedString+Extension.m */; };
 		CF93121021427B4200865EBC /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF93120F21427B4200865EBC /* NSString+Extension.m */; };
 		CF9312132142848000865EBC /* RefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9312122142848000865EBC /* RefreshControl.m */; };
+		CF98589A215A0F39003D3C04 /* CommentsPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF985899215A0F39003D3C04 /* CommentsPopView.m */; };
+		CF98589D215A2456003D3C04 /* CommentListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CF98589C215A2456003D3C04 /* CommentListRequest.m */; };
+		CF9858A0215A2608003D3C04 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = CF98589F215A2608003D3C04 /* Comment.m */; };
+		CF9858A3215A2669003D3C04 /* CommentListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9858A2215A2669003D3C04 /* CommentListResponse.m */; };
 		CFB2CF5A2144BE7200524E4B /* EmotionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB2CF592144BE7200524E4B /* EmotionHelper.m */; };
 		CFB2CF5D2144BECE00524E4B /* NSTextAttachment+Emotion.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB2CF5C2144BECE00524E4B /* NSTextAttachment+Emotion.m */; };
 		CFB2CF65214652B900524E4B /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB2CF64214652B900524E4B /* UIWindow+Extension.m */; };
@@ -51,6 +62,7 @@
 		CFB2CF6F21466BC200524E4B /* UserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB2CF6E21466BC200524E4B /* UserRequest.m */; };
 		CFB2CF7221466D0F00524E4B /* UserResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB2CF7121466D0F00524E4B /* UserResponse.m */; };
 		CFB2CF752146796500524E4B /* UserInfoHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB2CF742146796500524E4B /* UserInfoHeader.m */; };
+		CFFBC41C21521DF10092CA1E /* WebCacheHelpler.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFBC41B21521DF10092CA1E /* WebCacheHelpler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,8 +117,20 @@
 		CF2517EF214156F300BABCF9 /* ChatListResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatListResponse.m; sourceTree = "<group>"; };
 		CF2517F221415A7E00BABCF9 /* NSDate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		CF2517F321415A7E00BABCF9 /* NSDate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
-		CF2B8E512150AE72007AE6E6 /* AwemeListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwemeListController.h; sourceTree = "<group>"; };
-		CF2B8E522150AE72007AE6E6 /* AwemeListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwemeListController.m; sourceTree = "<group>"; };
+		CF2B8E5621510B71007AE6E6 /* AVPlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerManager.m; sourceTree = "<group>"; };
+		CF2B8E5721510B71007AE6E6 /* AVPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerView.h; sourceTree = "<group>"; };
+		CF2B8E5821510B71007AE6E6 /* AVPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerView.m; sourceTree = "<group>"; };
+		CF2B8E5921510B72007AE6E6 /* AVPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerManager.h; sourceTree = "<group>"; };
+		CF2B8E5C21510BB9007AE6E6 /* AwemeListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwemeListController.h; sourceTree = "<group>"; };
+		CF2B8E5D21510BB9007AE6E6 /* AwemeListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwemeListController.m; sourceTree = "<group>"; };
+		CF2B8E6921510DF3007AE6E6 /* WebPImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPImage.h; sourceTree = "<group>"; };
+		CF2B8E6A21510DF3007AE6E6 /* WebPImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPImageView.h; sourceTree = "<group>"; };
+		CF2B8E6B21510DF3007AE6E6 /* WebPQueueManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPQueueManager.h; sourceTree = "<group>"; };
+		CF2B8E6C21510DF3007AE6E6 /* WebPImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebPImage.m; sourceTree = "<group>"; };
+		CF2B8E6D21510DF3007AE6E6 /* WebPImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebPImageView.m; sourceTree = "<group>"; };
+		CF2B8E6E21510DF3007AE6E6 /* WebPQueueManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebPQueueManager.m; sourceTree = "<group>"; };
+		CF2B8E97215114A4007AE6E6 /* AwemeListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwemeListCell.h; sourceTree = "<group>"; };
+		CF2B8E98215114A4007AE6E6 /* AwemeListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwemeListCell.m; sourceTree = "<group>"; };
 		CF3709FA214374B3009DEC79 /* ChatTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatTextView.h; sourceTree = "<group>"; };
 		CF3709FB214374B3009DEC79 /* ChatTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatTextView.m; sourceTree = "<group>"; };
 		CF3709FD2143A09D009DEC79 /* NSNotification+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNotification+Extension.h"; sourceTree = "<group>"; };
@@ -115,6 +139,8 @@
 		CF370A012143AFE6009DEC79 /* EmotionSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmotionSelector.m; sourceTree = "<group>"; };
 		CF370A042143C32D009DEC79 /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
 		CF370A062143C342009DEC79 /* emotion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emotion.json; sourceTree = "<group>"; };
+		CF53ED8E2154D44700C34CBF /* UIImageView+XR_WebCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+XR_WebCache.h"; sourceTree = "<group>"; };
+		CF53ED8F2154D44700C34CBF /* UIImageView+XR_WebCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+XR_WebCache.m"; sourceTree = "<group>"; };
 		CF93120521421E1C00865EBC /* TextMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextMessageCell.h; sourceTree = "<group>"; };
 		CF93120621421E1C00865EBC /* TextMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextMessageCell.m; sourceTree = "<group>"; };
 		CF931208214226A600865EBC /* UIImage+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
@@ -125,6 +151,14 @@
 		CF93120F21427B4200865EBC /* NSString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		CF9312112142848000865EBC /* RefreshControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefreshControl.h; sourceTree = "<group>"; };
 		CF9312122142848000865EBC /* RefreshControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefreshControl.m; sourceTree = "<group>"; };
+		CF985898215A0F39003D3C04 /* CommentsPopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentsPopView.h; sourceTree = "<group>"; };
+		CF985899215A0F39003D3C04 /* CommentsPopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentsPopView.m; sourceTree = "<group>"; };
+		CF98589B215A2456003D3C04 /* CommentListRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentListRequest.h; sourceTree = "<group>"; };
+		CF98589C215A2456003D3C04 /* CommentListRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentListRequest.m; sourceTree = "<group>"; };
+		CF98589E215A2608003D3C04 /* Comment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		CF98589F215A2608003D3C04 /* Comment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		CF9858A1215A2669003D3C04 /* CommentListResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentListResponse.h; sourceTree = "<group>"; };
+		CF9858A2215A2669003D3C04 /* CommentListResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentListResponse.m; sourceTree = "<group>"; };
 		CFB2CF582144BE7200524E4B /* EmotionHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmotionHelper.h; sourceTree = "<group>"; };
 		CFB2CF592144BE7200524E4B /* EmotionHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmotionHelper.m; sourceTree = "<group>"; };
 		CFB2CF5B2144BECE00524E4B /* NSTextAttachment+Emotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTextAttachment+Emotion.h"; sourceTree = "<group>"; };
@@ -141,6 +175,8 @@
 		CFB2CF7121466D0F00524E4B /* UserResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserResponse.m; sourceTree = "<group>"; };
 		CFB2CF732146796500524E4B /* UserInfoHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoHeader.h; sourceTree = "<group>"; };
 		CFB2CF742146796500524E4B /* UserInfoHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoHeader.m; sourceTree = "<group>"; };
+		CFFBC41A21521DF10092CA1E /* WebCacheHelpler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebCacheHelpler.h; sourceTree = "<group>"; };
+		CFFBC41B21521DF10092CA1E /* WebCacheHelpler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebCacheHelpler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +229,7 @@
 		CF2517B22141211400BABCF9 /* XR_Douyin */ = {
 			isa = PBXGroup;
 			children = (
-				CF2B8E502150AE3B007AE6E6 /* AwemeList */,
+				CF2B8E6821510DF3007AE6E6 /* WebP */,
 				CF370A032143C321009DEC79 /* Resource */,
 				CF2517F121415A5600BABCF9 /* Category */,
 				CF2517DA21414D1B00BABCF9 /* Entity */,
@@ -223,6 +259,7 @@
 		CF2517CE2141239400BABCF9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CF2B8E5421510B29007AE6E6 /* AwemeList */,
 				CFB2CF66214665EE00524E4B /* UserHomePage */,
 				CF9312042142152000865EBC /* Chat */,
 				CF2517CF214123BF00BABCF9 /* BaseViewController.h */,
@@ -240,6 +277,8 @@
 				CF2517D62141369100BABCF9 /* HttpRequest */,
 				CF2517D32141301000BABCF9 /* NetworkHelper.h */,
 				CF2517D42141301000BABCF9 /* NetworkHelper.m */,
+				CFFBC41A21521DF10092CA1E /* WebCacheHelpler.h */,
+				CFFBC41B21521DF10092CA1E /* WebCacheHelpler.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -255,6 +294,8 @@
 				CFB2CF6E21466BC200524E4B /* UserRequest.m */,
 				CF07E4702147A647006A8654 /* AwemeListRequest.h */,
 				CF07E4712147A647006A8654 /* AwemeListRequest.m */,
+				CF98589B215A2456003D3C04 /* CommentListRequest.h */,
+				CF98589C215A2456003D3C04 /* CommentListRequest.m */,
 			);
 			path = HttpRequest;
 			sourceTree = "<group>";
@@ -278,6 +319,8 @@
 				CF07E47A2147A899006A8654 /* Video.m */,
 				CF07E47C2147A931006A8654 /* Music.h */,
 				CF07E47D2147A931006A8654 /* Music.m */,
+				CF98589E215A2608003D3C04 /* Comment.h */,
+				CF98589F215A2608003D3C04 /* Comment.m */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -293,6 +336,8 @@
 				CF2517EF214156F300BABCF9 /* ChatListResponse.m */,
 				CFB2CF7021466D0F00524E4B /* UserResponse.h */,
 				CFB2CF7121466D0F00524E4B /* UserResponse.m */,
+				CF9858A1215A2669003D3C04 /* CommentListResponse.h */,
+				CF9858A2215A2669003D3C04 /* CommentListResponse.m */,
 			);
 			path = HttpResponse;
 			sourceTree = "<group>";
@@ -314,17 +359,48 @@
 				CFB2CF5C2144BECE00524E4B /* NSTextAttachment+Emotion.m */,
 				CFB2CF63214652B900524E4B /* UIWindow+Extension.h */,
 				CFB2CF64214652B900524E4B /* UIWindow+Extension.m */,
+				CF53ED8E2154D44700C34CBF /* UIImageView+XR_WebCache.h */,
+				CF53ED8F2154D44700C34CBF /* UIImageView+XR_WebCache.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
 		};
-		CF2B8E502150AE3B007AE6E6 /* AwemeList */ = {
+		CF2B8E5421510B29007AE6E6 /* AwemeList */ = {
 			isa = PBXGroup;
 			children = (
-				CF2B8E512150AE72007AE6E6 /* AwemeListController.h */,
-				CF2B8E522150AE72007AE6E6 /* AwemeListController.m */,
+				CF2B8E5521510B62007AE6E6 /* AVPlayer */,
+				CF2B8E5C21510BB9007AE6E6 /* AwemeListController.h */,
+				CF2B8E5D21510BB9007AE6E6 /* AwemeListController.m */,
+				CF2B8E97215114A4007AE6E6 /* AwemeListCell.h */,
+				CF2B8E98215114A4007AE6E6 /* AwemeListCell.m */,
+				CF985898215A0F39003D3C04 /* CommentsPopView.h */,
+				CF985899215A0F39003D3C04 /* CommentsPopView.m */,
 			);
 			path = AwemeList;
+			sourceTree = "<group>";
+		};
+		CF2B8E5521510B62007AE6E6 /* AVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				CF2B8E5921510B72007AE6E6 /* AVPlayerManager.h */,
+				CF2B8E5621510B71007AE6E6 /* AVPlayerManager.m */,
+				CF2B8E5721510B71007AE6E6 /* AVPlayerView.h */,
+				CF2B8E5821510B71007AE6E6 /* AVPlayerView.m */,
+			);
+			path = AVPlayer;
+			sourceTree = "<group>";
+		};
+		CF2B8E6821510DF3007AE6E6 /* WebP */ = {
+			isa = PBXGroup;
+			children = (
+				CF2B8E6921510DF3007AE6E6 /* WebPImage.h */,
+				CF2B8E6A21510DF3007AE6E6 /* WebPImageView.h */,
+				CF2B8E6B21510DF3007AE6E6 /* WebPQueueManager.h */,
+				CF2B8E6C21510DF3007AE6E6 /* WebPImage.m */,
+				CF2B8E6D21510DF3007AE6E6 /* WebPImageView.m */,
+				CF2B8E6E21510DF3007AE6E6 /* WebPQueueManager.m */,
+			);
+			path = WebP;
 			sourceTree = "<group>";
 		};
 		CF370A032143C321009DEC79 /* Resource */ = {
@@ -473,21 +549,29 @@
 				CF2517EA2141552700BABCF9 /* PictureInfo.m in Sources */,
 				CF07E4722147A647006A8654 /* AwemeListRequest.m in Sources */,
 				CF3709FF2143A09D009DEC79 /* NSNotification+Extension.m in Sources */,
+				CF2B8E6F21510DF3007AE6E6 /* WebPImage.m in Sources */,
 				CF07E4842147C19E006A8654 /* LoadMoreControl.m in Sources */,
 				CF2517B82141211400BABCF9 /* ViewController.m in Sources */,
+				CF98589D215A2456003D3C04 /* CommentListRequest.m in Sources */,
 				CF93120A214226A600865EBC /* UIImage+Extension.m in Sources */,
 				CF370A022143AFE6009DEC79 /* EmotionSelector.m in Sources */,
 				CFB2CF7221466D0F00524E4B /* UserResponse.m in Sources */,
 				CF07E4782147A7F6006A8654 /* AwemeListResponse.m in Sources */,
 				CF07E4812147AD01006A8654 /* AwemeCollectoinCell.m in Sources */,
+				CF9858A0215A2608003D3C04 /* Comment.m in Sources */,
 				CF2517D1214123BF00BABCF9 /* BaseViewController.m in Sources */,
 				CFB2CF5D2144BECE00524E4B /* NSTextAttachment+Emotion.m in Sources */,
+				CF9858A3215A2669003D3C04 /* CommentListResponse.m in Sources */,
 				CF2517E321414EC500BABCF9 /* XRDGroupChatListRequest.m in Sources */,
+				CF2B8E7021510DF3007AE6E6 /* WebPImageView.m in Sources */,
 				CFB2CF6C21466A9B00524E4B /* User.m in Sources */,
 				CF07E47B2147A899006A8654 /* Video.m in Sources */,
 				CFB2CF752146796500524E4B /* UserInfoHeader.m in Sources */,
+				CF2B8E5B21510B72007AE6E6 /* AVPlayerView.m in Sources */,
 				CF2517DD21414D3200BABCF9 /* BaseModel.m in Sources */,
+				CF2B8E5E21510BB9007AE6E6 /* AwemeListController.m in Sources */,
 				CFB2CF6F21466BC200524E4B /* UserRequest.m in Sources */,
+				CF2B8E5A21510B72007AE6E6 /* AVPlayerManager.m in Sources */,
 				CF93121021427B4200865EBC /* NSString+Extension.m in Sources */,
 				CF2517E021414D6D00BABCF9 /* GroupChat.m in Sources */,
 				CF93120721421E1C00865EBC /* TextMessageCell.m in Sources */,
@@ -498,15 +582,19 @@
 				CF2517D52141301000BABCF9 /* NetworkHelper.m in Sources */,
 				CF2517CB214121C200BABCF9 /* XRDChatlistVC.m in Sources */,
 				CF93120D2142492800865EBC /* NSAttributedString+Extension.m in Sources */,
+				CF2B8E7121510DF3007AE6E6 /* WebPQueueManager.m in Sources */,
 				CF07E47E2147A931006A8654 /* Music.m in Sources */,
 				CF2517ED2141555F00BABCF9 /* Visitor.m in Sources */,
+				CF53ED902154D44700C34CBF /* UIImageView+XR_WebCache.m in Sources */,
+				CFFBC41C21521DF10092CA1E /* WebCacheHelpler.m in Sources */,
 				CFB2CF692146661400524E4B /* UserHomePageController.m in Sources */,
 				CF2517D9214136B200BABCF9 /* BaseRequest.m in Sources */,
 				CF2517F421415A7E00BABCF9 /* NSDate+Extension.m in Sources */,
-				CF2B8E532150AE72007AE6E6 /* AwemeListController.m in Sources */,
 				CF2517C32141211500BABCF9 /* main.m in Sources */,
 				CF2517B52141211400BABCF9 /* AppDelegate.m in Sources */,
+				CF98589A215A0F39003D3C04 /* CommentsPopView.m in Sources */,
 				CF2517E72141540700BABCF9 /* BaseResponse.m in Sources */,
+				CF2B8E99215114A4007AE6E6 /* AwemeListCell.m in Sources */,
 				CF9312132142848000865EBC /* RefreshControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

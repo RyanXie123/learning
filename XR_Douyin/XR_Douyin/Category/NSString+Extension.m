@@ -25,7 +25,11 @@
 }
 
 
-
+- (NSURL *)urlScheme:(NSString *)scheme {
+    NSURLComponents *components = [[NSURLComponents alloc] initWithURL:[NSURL URLWithString:self] resolvingAgainstBaseURL:NO];
+    components.scheme = scheme;
+    return [components URL];
+}
 
 + (NSDictionary *)readJson2DicWithFileName:(NSString *)fileName {
     NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"json"];
@@ -34,5 +38,12 @@
     return dic;
 }
 
++ (NSString *)formatCount:(NSInteger)count {
+    if(count < 10000) {
+        return [NSString stringWithFormat:@"%ld",(long)count];
+    }else {
+        return [NSString stringWithFormat:@"%.1fw",count/10000.0f];
+    }
+}
 
 @end
