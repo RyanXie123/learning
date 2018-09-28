@@ -22,7 +22,7 @@
 
 
 
-@interface UserHomePageController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate,UserInfoDelegate>
+@interface UserHomePageController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate,UserInfoDelegate,UIViewControllerTransitioningDelegate>
 
 @property (nonatomic, assign) NSInteger pageIndex;
 @property (nonatomic, assign) NSInteger pageSize;
@@ -231,6 +231,14 @@
     } failure:^(NSError *error) {
         [wSelf.loadMore loadingFailed];
     }];
+}
+
+
+
+#pragma mark - UIViewControllerTransitioningDelegate
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    
 }
 
 

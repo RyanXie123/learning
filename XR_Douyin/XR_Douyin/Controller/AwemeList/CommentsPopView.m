@@ -30,6 +30,7 @@
 
 @property (nonatomic, strong) LoadMoreControl *loadMore;
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) CommentTextView *textView;
 @end
 
 
@@ -89,6 +90,7 @@
         }];
         [_tableView addSubview:_loadMore];
         
+        _textView = [[CommentTextView alloc]init];
         
         
     }
@@ -176,6 +178,7 @@
     } completion:^(BOOL finished) {
         
     }];
+    [_textView show];
 }
 
 - (void)dismiss {
@@ -185,6 +188,7 @@
         self.container.frame = frame;
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
+        [self.textView dismiss];
     }];
 }
 
@@ -320,5 +324,156 @@
     return size.height + 30 + 30;
 }
 
+
+@end
+
+
+#define LEFT_INSET                 15
+#define RIGHT_INSET                60
+#define TOP_BOTTOM_INSET           15
+
+@interface CommentTextView ()<UITextViewDelegate>
+@property (nonatomic, assign) CGFloat textHeight;
+@property (nonatomic, assign) CGFloat keyboardHeight;
+@property (nonatomic, strong) UILabel *placeHolderLabel;
+@property (nonatomic, strong) UIImageView *atImageView;
+@property (nonatomic, strong) UIVisualEffectView *visualEffectView;
+
+@end
+
+
+
+@implementation CommentTextView
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.frame = SCREEN_FRAME;
+        self.backgroundColor = ColorClear;
+        [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleGuesture:)]];
+        
+        
+        _textView = [[UITextView alloc]init];
+        _textView.backgroundColor = ColorBlackAlpha40;
+        
+        _textView.clipsToBounds = NO;
+        _textView.textColor = ColorWhite;
+        _textView.font = BigFont;
+        _textView.returnKeyType = UIReturnKeySend;
+        _textView.scrollEnabled = NO;
+        _textView.textContainer.lineBreakMode = NSLineBreakByTruncatingTail;
+        _textView.textContainerInset = UIEdgeInsetsMake(TOP_BOTTOM_INSET, LEFT_INSET, TOP_BOTTOM_INSET, RIGHT_INSET);
+        _textHeight = ceilf(_textView.font.lineHeight);
+        
+        _placeHolderLabel = [UILabel new];
+        _placeHolderLabel.text = @"有爱评论，说点儿好听的~";
+        _placeHolderLabel.textColor = ColorGray;
+        _placeHolderLabel.font = BigFont;
+        _placeHolderLabel.frame = CGRectMake(LEFT_INSET, 0, SCREEN_WIDTH - LEFT_INSET - RIGHT_INSET, 50);
+        [_textView addSubview:_placeHolderLabel];
+        
+        
+        _atImageView = [[UIImageView alloc] init];
+        _atImageView.contentMode = UIViewContentModeCenter;
+        _atImageView.image = [UIImage imageNamed:@"iconWhiteaBefore"];
+        [_textView addSubview:_atImageView];
+        [self addSubview:_textView];
+        
+        _textView.delegate = self;
+        
+        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil
+         ];
+    }
+    return self;
+}
+
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    _atImageView.frame = CGRectMake(SCREEN_WIDTH - 50, 0, 50, 50);
+    [self updateTextViewFrame];
+    
+    
+    UIBezierPath *rounded = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii:CGSizeMake(10, 10)];
+    CAShapeLayer *shape = [CAShapeLayer layer];
+    shape.path = rounded.CGPath;
+    _textView.layer.mask = shape;
+    
+}
+
+
+- (void)updateTextViewFrame {
+    CGFloat textViewHeight = _keyboardHeight > 0 ? _textHeight + 2 * TOP_BOTTOM_INSET: ceilf(_textView.font.lineHeight) + 2 * TOP_BOTTOM_INSET;
+    _textView.frame = CGRectMake(0, SCREEN_HEIGHT - _keyboardHeight - textViewHeight, SCREEN_WIDTH, textViewHeight);
+    
+}
+
+
+- (void)textViewDidChange:(UITextView *)textView {
+    if (!textView.hasText) {
+        _placeHolderLabel.hidden = NO;
+        _textHeight = ceilf(_textView.font.lineHeight);
+    }else {
+        _placeHolderLabel.hidden = YES;
+        
+        _textHeight = [textView.attributedText multiLineSize:SCREEN_WIDTH - LEFT_INSET - RIGHT_INSET].height;
+    }
+     [self updateTextViewFrame];
+}
+
+
+- (void)keyboardWillShow:(NSNotification *)notification {
+    _keyboardHeight = [notification keyboardHeight];
+    [self updateTextViewFrame];
+    _atImageView.image = [UIImage imageNamed:@"iconBlackaBefore"];
+    _textView.backgroundColor = ColorWhite;
+    _textView.textColor = ColorBlack;
+    self.backgroundColor = ColorBlackAlpha60;
+    
+}
+
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+    _keyboardHeight = 0;
+    [self updateTextViewFrame];
+    _atImageView.image = [UIImage imageNamed:@"iconWhiteaBefore"];
+    _textView.backgroundColor = ColorBlackAlpha40;
+    _textView.textColor = ColorWhite;
+    self.backgroundColor = ColorClear;
+}
+
+
+- (void)handleGuesture:(UIGestureRecognizer *)ges {
+    CGPoint point = [ges locationInView:_textView];
+    if (![_textView.layer containsPoint:point]) {
+        [_textView resignFirstResponder];
+    }
+}
+
+
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    UIView *hitView = [super hitTest:point withEvent:event];
+    if (hitView == self) {
+        if (hitView.backgroundColor == ColorClear) {
+            return nil;
+        }
+    }
+    return hitView;
+}
+
+- (void)show {
+    UIWindow *window = [[[UIApplication sharedApplication]delegate]window];
+    [window addSubview:self];
+}
+
+- (void)dismiss {
+    [self removeFromSuperview];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
 
 @end

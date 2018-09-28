@@ -32,4 +32,13 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
+@interface CommentTextView : UIView
+
+@property (nonatomic, strong) UITextView  *textView;
+- (void)show;
+- (void)dismiss;
+
+@end
+
+
 NS_ASSUME_NONNULL_END

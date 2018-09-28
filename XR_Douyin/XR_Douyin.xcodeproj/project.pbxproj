@@ -39,6 +39,7 @@
 		CF2B8E7021510DF3007AE6E6 /* WebPImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2B8E6D21510DF3007AE6E6 /* WebPImageView.m */; };
 		CF2B8E7121510DF3007AE6E6 /* WebPQueueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2B8E6E21510DF3007AE6E6 /* WebPQueueManager.m */; };
 		CF2B8E99215114A4007AE6E6 /* AwemeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2B8E98215114A4007AE6E6 /* AwemeListCell.m */; };
+		CF324DD6215CCA15005D9C85 /* ScalePresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CF324DD5215CCA15005D9C85 /* ScalePresentAnimation.m */; };
 		CF3709FC214374B3009DEC79 /* ChatTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3709FB214374B3009DEC79 /* ChatTextView.m */; };
 		CF3709FF2143A09D009DEC79 /* NSNotification+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3709FE2143A09D009DEC79 /* NSNotification+Extension.m */; };
 		CF370A022143AFE6009DEC79 /* EmotionSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = CF370A012143AFE6009DEC79 /* EmotionSelector.m */; };
@@ -131,6 +132,8 @@
 		CF2B8E6E21510DF3007AE6E6 /* WebPQueueManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebPQueueManager.m; sourceTree = "<group>"; };
 		CF2B8E97215114A4007AE6E6 /* AwemeListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AwemeListCell.h; sourceTree = "<group>"; };
 		CF2B8E98215114A4007AE6E6 /* AwemeListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwemeListCell.m; sourceTree = "<group>"; };
+		CF324DD4215CCA15005D9C85 /* ScalePresentAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScalePresentAnimation.h; sourceTree = "<group>"; };
+		CF324DD5215CCA15005D9C85 /* ScalePresentAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScalePresentAnimation.m; sourceTree = "<group>"; };
 		CF3709FA214374B3009DEC79 /* ChatTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatTextView.h; sourceTree = "<group>"; };
 		CF3709FB214374B3009DEC79 /* ChatTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatTextView.m; sourceTree = "<group>"; };
 		CF3709FD2143A09D009DEC79 /* NSNotification+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNotification+Extension.h"; sourceTree = "<group>"; };
@@ -403,6 +406,15 @@
 			path = WebP;
 			sourceTree = "<group>";
 		};
+		CF324DD3215CC9E8005D9C85 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				CF324DD4215CCA15005D9C85 /* ScalePresentAnimation.h */,
+				CF324DD5215CCA15005D9C85 /* ScalePresentAnimation.m */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
 		CF370A032143C321009DEC79 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -440,6 +452,7 @@
 		CFB2CF66214665EE00524E4B /* UserHomePage */ = {
 			isa = PBXGroup;
 			children = (
+				CF324DD3215CC9E8005D9C85 /* Transition */,
 				CFB2CF672146661400524E4B /* UserHomePageController.h */,
 				CFB2CF682146661400524E4B /* UserHomePageController.m */,
 				CFB2CF732146796500524E4B /* UserInfoHeader.h */,
@@ -592,6 +605,7 @@
 				CF2517F421415A7E00BABCF9 /* NSDate+Extension.m in Sources */,
 				CF2517C32141211500BABCF9 /* main.m in Sources */,
 				CF2517B52141211400BABCF9 /* AppDelegate.m in Sources */,
+				CF324DD6215CCA15005D9C85 /* ScalePresentAnimation.m in Sources */,
 				CF98589A215A0F39003D3C04 /* CommentsPopView.m in Sources */,
 				CF2517E72141540700BABCF9 /* BaseResponse.m in Sources */,
 				CF2B8E99215114A4007AE6E6 /* AwemeListCell.m in Sources */,
